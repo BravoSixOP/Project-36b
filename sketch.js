@@ -59,9 +59,6 @@ function readStock(data){
 function feedDog(){
 if(foodS > 0){
   dog.addImage(happyDog);
-}
-  //write code here to update food stock and last fed time
-  if(foodS > 0){
     foodS= foodS-1;
   }  
   database.ref('/').update({
