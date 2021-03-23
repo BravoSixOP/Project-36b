@@ -57,7 +57,7 @@ function readStock(data){
 
 
 function feedDog(){
-if(foodS > 1){
+if(foodS >= 1){
   dog.addImage(happyDog);
 }
 if(foodS > 0){
