@@ -1,5 +1,6 @@
 var dog,sadDog,happyDog, database;
-var foodS,foodStock;
+var foodS = 0;
+var foodStock;
 var addFood;
 var foodObj;
 
@@ -56,10 +57,13 @@ function readStock(data){
 
 
 function feedDog(){
-  dog.addImage(happyDog);
+
+dog.addImage(happyDog);
 
   //write code here to update food stock and last fed time
-  foodS= foodS-1;
+  if(foodS > 0){
+    foodS= foodS-1;
+  }  
   database.ref('/').update({
     Food:foodS
   })
