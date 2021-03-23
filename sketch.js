@@ -57,10 +57,12 @@ function readStock(data){
 
 
 function feedDog(){
-if(foodS > 0){
+if(foodS > 1){
   dog.addImage(happyDog);
+}
+if(foodS > 0){
     foodS= foodS-1;
-  }  
+}  
   database.ref('/').update({
     Food:foodS
   })
